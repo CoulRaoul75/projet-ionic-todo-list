@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste utilisateurs avec API</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let user of userList">
+      <ion-label>
+        {{ user.name.first }} {{ user.name.last}}
+      </ion-label>
+      <ion-avatar slot="start">
+        <ion-img src="{{user.picture.large}}"></ion-img>
+
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="loadMoreUsers($event)">
+    <ion-infinite-scroll-content loading-text="en cours..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

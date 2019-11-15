@@ -20,7 +20,17 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
-    }
+    },
+    {
+      title: 'Todo list',
+      url: '/todo-list',
+      icon: 'list-box'
+    },
+    {
+      title: 'Liste des utilisateurs',
+      url: '/user-list',
+      icon: 'people'
+    },
   ];
 
   constructor(
